@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+//Colors
+$blue: #0077FF;
+$branquinho: #FFFFFF;
+$verde: #098171;
+$brancoGreen: #f8f7ee;
+$brown: #333333;
+$orange: #ff9306;
+
+// BreakPoint
+$desktop: 1024px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: $branquinho;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 45% 55%;
+    row-gap: 40px;
+    width: 100%;
+    height: 100%;
+
+    .label-start {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-row: 1;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: $verde;
+
+        h1 {
+            font-size: 1.5rem;
+            font-family: 'Roboto' , sans-serif;
+            font-weight: 500;
+        }
+
+        i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+    }
+
+    .formulario {
+        width: 100%;
+        height: 100%;
+        grid-row: 2;
+
+        .title {
+            display: none;
+        }
+
+        .form-group {
+            width: 90%;
+            margin: auto;
+            margin-bottom: 20px;
+
+            input {
+                width: 100%;
+                height: 50px;
+                padding: 20px;
+                border-radius: 10px;
+                background-color: $brancoGreen;
+                border: none;
+                outline: none;
+                font-family: 'Roboto' , sans-serif;
+                font-weight: 300;
+
+                &:active {
+                    border: 2px solid $verde;
+                }
+                &:focus {
+                    border: 2px solid $verde;
+                }
+            }
+            
+            button {
+                width: 140px;
+                height: 40px;
+                background-color: $verde;
+                border: none;
+                color: $branquinho;
+                border-radius: 20px;
+                font-family: 'Roboto' , sans-serif;
+                font-weight: 500;
+                transition: ease-in-out 0.3s;
+
+                &:hover {
+                    background-color: #056659;
+                    transition: ease-in-out 0.3s;
+                }
+
+                &:active {
+                    background-color: #056659;
+                }
+            }
+        }
+
+        .m-auto {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width: $desktop) {
+
+    .grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        width: 100%;
+        height: 100%;
+
+        .label-start {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            grid-row: 1;
+            grid-column: 1;
+            width: 100%;
+            height: 100%;
+            background-color: $verde;
+
+            h1 {
+                font-size: 1.8rem;
+                font-family: 'Roboto' , sans-serif;
+                font-weight: 700;
+                transition: ease-in-out 0.3s;
+
+                &:hover {
+                    color: #D1D1D1;
+                    transition: ease-in-out 0.3s;
+                }
+            }
+
+            i {
+                font-size: 4rem;
+                margin-bottom: 20px;
+                transition: ease-in-out 0.3s;
+
+                &:hover {
+                    color: #D1D1D1;
+                    transition: ease-in-out 0.3s;
+                }
+            }
+        }
+
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            grid-row: 1;
+            grid-column: 2;
+
+            .title {
+                display: block;
+                width: 90%;
+                margin: auto;
+                margin-bottom: 30px;
+
+                h1 {
+                    font-size: 1.6rem;
+                    color: $orange;
+                    text-align: center;
+                    font-family: 'Roboto' , sans-serif;
+                    font-weight: 700;
+                    transition: ease-in-out 0.3s;
+
+                    &:hover {
+                        color: #FFA500;
+                        transition: ease-in-out 0.3s;
+                    }
+                }
+            }
+
+            .form-group {
+                width: 90%;
+                margin: auto;
+                margin-bottom: 20px;
+
+                input {
+                    width: 100%;
+                    height: 50%;
+                    padding: 20px;
+                    border-radius: 10px;
+                    background-color: $brancoGreen;
+                    border: none;
+                    outline: none;
+                    font-family: 'Roboto' , sans-serif;
+                    font-weight: 300;
+                    transition: ease-in-out 0.3s;
+
+                    &:active {
+                        border: 2px solid $verde;
+                    }
+
+                    &:focus {
+                        border: 2px solid $verde;
+                    }
+
+                    button {
+                        width: 140px;
+                        height: 40px;
+                        background-color: $verde;
+                        border: none;
+                        color: $branquinho;
+                        border-radius: 20px;
+                        font-family: 'Roboto' , sans-serif;
+                        transition: ease-in-out 0.3s;
+
+                        &:hover {
+                            background-color: #056659;
+                            transition: ease-in-out 0.3s;
+                        }
+
+                        &:active {
+                            background-color: #056659;
+                        }
+                    }
+                }
+            }
+
+            .m-auto {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 30px;
+            }
+        }
+    }
+}
